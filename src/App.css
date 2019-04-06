@@ -9,7 +9,7 @@ body{
 .calculatorBody{
   border: 2px solid gray;
   width: 30vw;
-  height: 40vw;
+  height: 47vw;
   background: #eaeaea;
   margin:auto;
   margin-top: 3vw;
@@ -26,4 +26,97 @@ body{
   width: 90%;
   border-radius: 10px;
   box-shadow: 0px 0px 5px black;
+}
+
+.special-button-container{
+  display: flex;
+  padding: 1vw;
+  margin: 1vw;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+}
+
+.special-btn-cont-margin-top{
+  margin-top: 1vw;
+}
+
+.special-button{
+  background: #0c69ff;
+  height: 2vw;
+  width: 3vw;
+  border-radius: 5px;
+  margin: .2vw;
+  padding: 2px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0px 0px 15px gray;
+}
+
+.special-button:active{
+  background: red;
+  color: white;
+  font-weight: bold;
+}
+
+.special-button-name{
+  margin: auto;
+  padding: inherit;
+}
+
+.numbers-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2.5vw;
+  margin-left: 2.6vw
+
+}
+
+.each-number{
+  background: #0c69ff;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 1vw;
+  margin-bottom: 1vw;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px gray;
+}
+.each-number:active{
+  background: red;
+  color: white;
+  font-weight: bold;
+}
+
+.number-button-txt{
+  margin: auto;
+  margin-top: 1.2vw;
+}
+
+.functions-container{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-left: 3.2vw;
+}
+
+.each-function{
+    background: #0c69ff;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    margin-top: 1vw;
+    padding-top: .3vw;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.each-function:active{
+  background: red;
+  color: white;
+  font-weight: bold;
 }
