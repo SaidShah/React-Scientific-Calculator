@@ -122,12 +122,16 @@ body{
 }
 
 .screen-for-calc{
-  height: 96%;
-  width: 98%;
+  height: 87%;
+  width: 92%;
   border-radius: 10px;
   margin-left: .05vw;
   background: black;
   color: yellow;
   font-weight: bold;
   font-size: 20px;
+  resize: none;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vw;
 }

@@ -7,41 +7,65 @@ import './App.css';
 
 let firstKeyArr = ["sin","cos","tan","sqrt","pow","log","off"]
 let secondKeyArr = ["(",")",",","x","y","( - )","clear"]
-let numbersArr = [1,2,3,4,5,6,7,8,9,0,".","="]
+let numbersArr = ["1","2","3","4","5","6","7","8","9","0",".","="]
 let functionsArr = ["+","/","*","-"]
 
 class App extends Component {
 
+  state={
+    numbers: '',
+    givenFunction: ''
+  }
+
   addSpecialButtons=()=>{
     let firstSpKeys = firstKeyArr.map(eachKey=>{
-      return <SpecialButton func={eachKey} key={eachKey}/>
+      return <SpecialButton func={eachKey} key={eachKey} secondKeysClick={this.secondKeysClick}/>
     })
     return firstSpKeys
   }
 
   addSecondSpecialKeys=()=>{
     let secondSpKeys = secondKeyArr.map(eachKey=>{
-      return <SpecialButton func={eachKey} key={eachKey}/>
+      return <SpecialButton func={eachKey} key={eachKey} secondKeysClick={this.secondKeysClick}/>
     })
     return secondSpKeys
+  }
+
+  secondKeysClick=(givenItem)=>{
+    if(givenItem==="clear"){
+      document.getElementById("calcScreen").value=""
+    }else if(givenItem === "( - )"){
+      document.getElementById("calcScreen").value+="-"
+    }else{
+      document.getElementById("calcScreen").value+=givenItem
+    }
   }
 
   addFunctions=()=>{
     let secondSpKeys = functionsArr.map(eachKey=>{
-      return <Functions func={eachKey} key={eachKey}/>
+      return <Functions func={eachKey} key={eachKey} functionClick={this.functionClick}/>
     })
     return secondSpKeys
   }
 
+  functionClick=(givenFunc)=>{
+    document.getElementById("calcScreen").value+=givenFunc
+  }
+
   addNumbers=()=>{
     let funcs = numbersArr.map(eachKey=>{
-      return <Numbers func={eachKey} key={eachKey}/>
+      return <Numbers func={eachKey} key={eachKey} numberClick={this.numberClick}/>
     })
     return funcs
   }
 
+  numberClick=(givenNum)=>{
+    document.getElementById("calcScreen").value+=givenNum
+  }
+
 
   render() {
+
     return (
       <div className="outerbody">
         <div className="calculatorBody">

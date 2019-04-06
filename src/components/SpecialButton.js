@@ -6,7 +6,7 @@ class SpecialButton extends Component {
 
     return (
 
-      <div className="special-button">
+      <div className="special-button" onClick={()=>this.props.secondKeysClick(this.props.func)}>
         <h4 className="special-button-name">{this.props.func}</h4>
       </div>
 
