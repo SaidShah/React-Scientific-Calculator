@@ -120,3 +120,14 @@ body{
   color: white;
   font-weight: bold;
 }
+
+.screen-for-calc{
+  height: 96%;
+  width: 98%;
+  border-radius: 10px;
+  margin-left: .05vw;
+  background: black;
+  color: yellow;
+  font-weight: bold;
+  font-size: 20px;
+}
