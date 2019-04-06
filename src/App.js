@@ -3,12 +3,13 @@ import Screen from './components/Screen'
 import SpecialButton from './components/SpecialButton'
 import Numbers from './components/Numbers'
 import Functions from './components/Functions'
+import {doTheMath} from './doMath.js'
 import './App.css';
 
 let firstKeyArr = ["sin","cos","tan","sqrt","pow","log","off"]
 let secondKeyArr = ["(",")",",","x","y","( - )","clear"]
 let numbersArr = ["1","2","3","4","5","6","7","8","9","0",".","="]
-let functionsArr = ["+","/","*","-"]
+let functionsArr = ["+","/","*","-","del"]
 
 class App extends Component {
 
@@ -41,6 +42,10 @@ class App extends Component {
     }
   }
 
+  handleEquals=(givenValue)=>{
+    doTheMath(givenValue)
+  }
+
   addFunctions=()=>{
     let secondSpKeys = functionsArr.map(eachKey=>{
       return <Functions func={eachKey} key={eachKey} functionClick={this.functionClick}/>
@@ -49,7 +54,14 @@ class App extends Component {
   }
 
   functionClick=(givenFunc)=>{
-    document.getElementById("calcScreen").value+=givenFunc
+    if(givenFunc === "del" && document.getElementById("calcScreen").value.length > 0){
+      let currentValue = document.getElementById("calcScreen").value.slice(0,-1)
+      document.getElementById("calcScreen").value=currentValue
+
+    }else if(givenFunc !== "del"){
+      document.getElementById("calcScreen").value+=givenFunc
+
+    }
   }
 
   addNumbers=()=>{
@@ -60,7 +72,13 @@ class App extends Component {
   }
 
   numberClick=(givenNum)=>{
-    document.getElementById("calcScreen").value+=givenNum
+    if(givenNum === "="){
+      let wholeValue = document.getElementById("calcScreen").value
+      this.handleEquals(wholeValue)
+    }else{
+
+      document.getElementById("calcScreen").value+=givenNum
+    }
   }
 
 
