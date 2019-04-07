@@ -133,7 +133,7 @@ class App extends Component {
           <div className="special-button-container special-btn-cont-margin-top">
           {this.addSpecialButtons()}
           </div>
-          <div className="special-button-container second-special-btn-cont-margin-top">
+          <div className="special-button-container second-special-btn-cont-margin-top second-mobile-special">
           {this.addSecondSpecialKeys()}
           </div>
 
