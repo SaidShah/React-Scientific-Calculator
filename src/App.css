@@ -37,6 +37,10 @@ body{
   padding-bottom: 0px;
 }
 
+.second-special-btn-cont-margin-top{
+  margin-left: 2.9vw;
+}
+
 .special-btn-cont-margin-top{
   margin-top: 1vw;
 }
@@ -99,7 +103,7 @@ body{
   display: flex;
   width: 80%;
   margin: auto;
-  margin-left: 3.2vw;
+  margin-left: 3.0vw;
 }
 
 .each-function{

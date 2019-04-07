@@ -1,6 +1,9 @@
 /* eslint no-eval: 0 */
 
 function doTheMath(givenItems){
+  if(givenItems.length === 2){
+    document.getElementById("calcScreen").value+="\n Equation is Invalid\n"
+  }
   let eqArray=givenItems.split("\n")
   let index = eqArray.length-1
   let givenItem = eqArray[index]
@@ -16,18 +19,24 @@ function doTheMath(givenItems){
      }if(newExp2.charAt(newExp2.length-1) === "*"){
        newExp2 = newExp2.slice(0,-1)
      }
-     
+     try{
      let answer = eval(newExp2)
      document.getElementById("calcScreen").value+="\n"
      document.getElementById("calcScreen").value+=answer
      document.getElementById("calcScreen").value+="\n"
-
+   }catch(err){
+     document.getElementById("calcScreen").value+="\n Equation is Invalid\n"
+   }
    }else{
+     try{
      let answer = eval(givenItem)
      document.getElementById("calcScreen").value+="\n"
      document.getElementById("calcScreen").value+=answer
      document.getElementById("calcScreen").value+="\n"
-
+   }
+   catch(err){
+     document.getElementById("calcScreen").value+="\n Equation is Invalid\n"
+   }
    }
 
  }

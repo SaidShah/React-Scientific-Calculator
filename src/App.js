@@ -6,8 +6,8 @@ import Functions from './components/Functions'
 import {doTheMath} from './doMath.js'
 import './App.css';
 
-let firstKeyArr = ["sin","cos","tan","sqrt","pow","log","off"]
-let secondKeyArr = ["(",")",",","x","y","( - )","clear"]
+let firstKeyArr = ["on","off"]
+let secondKeyArr = ["(",")","x","y","( - )","clear"]
 let numbersArr = ["1","2","3","4","5","6","7","8","9","0",".","="]
 let functionsArr = ["+","/","*","-","del"]
 
@@ -37,6 +37,46 @@ class App extends Component {
       document.getElementById("calcScreen").value=""
     }else if(givenItem === "( - )"){
       document.getElementById("calcScreen").value+="-"
+    }else if(givenItem === "off"){
+        document.getElementById("calcScreen").value="Turning off"
+        setTimeout(()=>{
+          document.getElementById("calcScreen").value+="."
+        },200)
+        setTimeout(()=>{
+          document.getElementById("calcScreen").value+="."
+        },400)
+        setTimeout(()=>{
+          document.getElementById("calcScreen").value+="."
+        },600)
+        setTimeout(()=>{
+          document.getElementById("calcScreen").value+="."
+        },800)
+        setTimeout(()=>{
+          document.getElementById("calcScreen").value+="."
+        },1000)
+        setTimeout(()=>{
+          document.getElementById("calcScreen").value=""
+        },1200)
+    }else if(givenItem === "on"){
+      document.getElementById("calcScreen").value="Turning on"
+      setTimeout(()=>{
+        document.getElementById("calcScreen").value+="."
+      },200)
+      setTimeout(()=>{
+        document.getElementById("calcScreen").value+="."
+      },400)
+      setTimeout(()=>{
+        document.getElementById("calcScreen").value+="."
+      },600)
+      setTimeout(()=>{
+        document.getElementById("calcScreen").value+="."
+      },800)
+      setTimeout(()=>{
+        document.getElementById("calcScreen").value+="."
+      },1000)
+      setTimeout(()=>{
+        document.getElementById("calcScreen").value="enter equation \n"
+      },1200)
     }else{
       document.getElementById("calcScreen").value+=givenItem
     }
@@ -93,7 +133,7 @@ class App extends Component {
           <div className="special-button-container special-btn-cont-margin-top">
           {this.addSpecialButtons()}
           </div>
-          <div className="special-button-container">
+          <div className="special-button-container second-special-btn-cont-margin-top">
           {this.addSecondSpecialKeys()}
           </div>
 
