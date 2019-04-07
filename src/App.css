@@ -268,11 +268,11 @@ h4{
   }
 
   h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   h4{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .calculatorBody{
@@ -355,6 +355,122 @@ h4{
     margin: auto;
     font-weight: bold;
     box-shadow: 0px 0px 10px gray;
+  }
+
+  .screen-for-calc{
+    height: 100%;
+    width: 98%;
+    border-radius: 10px;
+    margin-left: .05vw;
+    background: black;
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+    resize: none;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+  }
+
+}
+
+
+@media only screen and (min-width: 668px) and (max-width: 1024px){
+
+  h1{
+    font-size: 4rem;
+  }
+
+  h2{
+    font-size: 3.5rem;
+  }
+
+  h4{
+    font-size: 3rem;
+  }
+
+  .calculatorBody{
+    border: 2px solid gray;
+    background: #eaeaea;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px black;
+    width: 90%;
+    height: 125vw;
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  .whole-screen{
+    background: black;
+    height: 30vw;
+    margin: auto;
+    margin-top: 2vw;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+  }
+
+  .special-button{
+    background: #0c69ff;
+    border-radius: 5px;
+    margin-top: 5vw;
+    margin-left: 2vw;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 0px 15px gray;
+    width: 41vw;
+    height: 10vw;
+  }
+
+  .second-mobile-special{
+    margin-left: 0px;
+  }
+
+  .functions-container{
+    display: flex;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 3vw;
+  }
+
+  .each-function{
+      background: #0c69ff;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 1vw;
+      padding-top: 1vw;
+      box-shadow: 0px 0px 15px gray;
+      height: 10vw;
+      width: 25vw;
+      margin-left: 1vw;
+      margin-right: 1vw;
+  }
+
+  .numbers-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 30%;
+
+  }
+
+  .each-number{
+    background: #0c69ff;
+    height: 10vw;
+    width: 20vw;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px gray;
+    padding-bottom: 3px;
   }
 
   .screen-for-calc{
